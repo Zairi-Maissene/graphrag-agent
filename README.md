@@ -8,7 +8,7 @@ This project is a FastAPI-based API for querying data within a graph-based searc
     - [Upload PDF](#upload-pdf)
     - [Retrieve Data](#retrieve-data)
     - [Answer Question](#answer-question)
-3. [API Endpoints](#api-endpoints)
+
 
 
 ## Setup
