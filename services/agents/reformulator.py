@@ -36,6 +36,5 @@ class AnswerReformulator:
         try:
             return self.llm.generate(messages)
         except Exception as e:
-            print(f"Error reformulating answer: {e}")
             return answer
 

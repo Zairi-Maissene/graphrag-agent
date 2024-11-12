@@ -39,6 +39,10 @@ This project is a FastAPI-based API for querying data within a graph-based searc
    ```bash
    pip install -r requirements.txt
    ```
+   ```bash
+    pip install --upgrade docling
+    ```
+   (Install docling seperately due to conflicting dependencies) 
    
 4. Set the environment variables:
 
@@ -60,7 +64,7 @@ This project is a FastAPI-based API for querying data within a graph-based searc
 ## Usage
 
 ### Upload PDF
-This will create a graph representation of the document and return a `document_id`.
+This will create a graph representation of the document and return a `document_id`, this could take a while for large files.
 ```bash
 Example:
 curl -X POST http://localhost:8000/upload \

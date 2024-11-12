@@ -3,5 +3,4 @@ uvicorn
 graphrag
 lancedb
 openai
-langchain
 requests

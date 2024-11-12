@@ -28,7 +28,6 @@ def load_pdf(url):
         raise HTTPException(status_code=400, detail="The provided URL does not point to a PDF file.")
 
     except Exception as e:
-        print(f"Error processing PDF: {e}")
         raise HTTPException(status_code=500, detail="An error occurred while processing the PDF file.")
 
     if len(processed_text.strip()) < 100:
@@ -51,7 +50,6 @@ def load_pdf(url):
 def setup_graphrag(document_id):
     try:
         init_command = f'python -m graphrag init --root graphs/{document_id}'
-        print(f"Running: {init_command}")  # Debug statement
         subprocess.run(init_command, shell=True, check=True)
 
         # Delete any .env file in the directory

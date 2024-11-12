@@ -8,6 +8,7 @@ import subprocess
 from services.agents.agent import Agent
 from services.lancedb_retriever import retrieve_docs
 from services.llm.llm import LLMClient
+from services.pdf_loader import load_pdf
 import uvicorn
 
 app = FastAPI(
@@ -39,6 +40,8 @@ async def upload_pdf(request: PDFUploadRequest):
     """
     Uploads a PDF file from the given URL and returns a unique document ID.
     """
+    document_id = load_pdf(request.url)
+
     return {"document_id": document_id}
 
 
